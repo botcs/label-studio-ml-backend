@@ -252,7 +252,7 @@ class Detectron2(LabelStudioMLBase):
         
         image_url = self._get_image_url(task)
         # image_path = self.get_local_path(image_url)
-        image_path = image_url.replace("/data/local-files/?d=./", "./datadir/")
+        image_path = image_url.replace("/data/local-files/?d=", "./datadir/")
 
         assert os.path.exists(image_path), f'Image not found: {image_path}'
         # image = read_image(image_path, format="BGR")
